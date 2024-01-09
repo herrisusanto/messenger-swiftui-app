@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct messenger_swiftui_appApp: App {
+struct MessengerSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
