@@ -38,6 +38,7 @@
 		0F0693162B50E95400A23B55 /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0693152B50E95400A23B55 /* NewMessageView.swift */; };
 		0F06931B2B50ED1300A23B55 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06931A2B50ED1300A23B55 /* ProfileView.swift */; };
 		0F06931D2B50EFA500A23B55 /* SettingsOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06931C2B50EFA500A23B55 /* SettingsOptionViewModel.swift */; };
+		0F06931F2B51765B00A23B55 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06931E2B51765B00A23B55 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		0F0693152B50E95400A23B55 /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		0F06931A2B50ED1300A23B55 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0F06931C2B50EFA500A23B55 /* SettingsOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionViewModel.swift; sourceTree = "<group>"; };
+		0F06931E2B51765B00A23B55 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				0F06931C2B50EFA500A23B55 /* SettingsOptionViewModel.swift */,
+				0F06931E2B51765B00A23B55 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				0F0692E12B4D2CE400A23B55 /* LoginView.swift in Sources */,
 				0F0692CE2B4D2B0C00A23B55 /* ContentView.swift in Sources */,
 				0F06930E2B50E1B900A23B55 /* InboxView.swift in Sources */,
+				0F06931F2B51765B00A23B55 /* ProfileViewModel.swift in Sources */,
 				0F0693112B50E32600A23B55 /* ActiveNowView.swift in Sources */,
 				0F0692CC2B4D2B0C00A23B55 /* MessengerSwiftUIApp.swift in Sources */,
 				0F0692E32B4D341400A23B55 /* RegistrationView.swift in Sources */,
