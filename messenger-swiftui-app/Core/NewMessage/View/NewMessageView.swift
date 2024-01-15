@@ -10,6 +10,8 @@ import SwiftUI
 struct NewMessageView: View {
     
     @State private var searchText = ""
+    @Binding var selectedUser: User?
+    @StateObject var viewModel = NewMessageViewModel()
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -26,20 +28,28 @@ struct NewMessageView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                 
-                ForEach(0 ... 10, id: \.self){ user in
-                    HStack {
-                        CircularProfileImageView(user: User.MOCK_USER, size: .small)
+                ForEach(viewModel.users){ user in
+                    VStack {
+                        HStack {
+                            CircularProfileImageView(user: user, size: .small)
+                            
+                            Text(user.fullName)
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                            
+                            Spacer()
+                        }
+                        .padding(.leading)
                         
-                        Text("Rose Blackpink")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                        
-                        Spacer()
+                        Divider()
+                            .padding(.leading, 40)
                     }
-                    .padding(.leading)
+                    .onTapGesture {
+                        selectedUser = user
+                        dismiss()
+                    }
                     
-                    Divider()
-                        .padding(.leading, 40)
+                    
                 }
             }
             .navigationTitle("New Message")
@@ -49,14 +59,14 @@ struct NewMessageView: View {
                     Button("Cancel"){
                         dismiss()
                     }
-                    .foregroundStyle(.black)            }
-        }
+                    .foregroundStyle(.black) }
+            }
         }
     }
 }
 
 #Preview {
     NavigationStack {
-        NewMessageView()
+        NewMessageView(selectedUser: .constant(User.MOCK_USER))
     }
 }
