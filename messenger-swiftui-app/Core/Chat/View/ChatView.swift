@@ -31,9 +31,10 @@ struct ChatView: View {
                             .foregroundStyle(Color(.systemGray))
                     }
                 }
-                
-                ForEach(viewModel.messages){message in
-                    ChatMessageCell(message: message)
+                LazyVStack {
+                    ForEach(viewModel.messages){message in
+                        ChatMessageCell(message: message)
+                    }
                 }
                 
             }
@@ -58,6 +59,8 @@ struct ChatView: View {
             }
             .padding()
         }
+        .navigationTitle(user.fullName)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
