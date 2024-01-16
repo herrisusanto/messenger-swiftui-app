@@ -10,7 +10,7 @@ import Firebase
 
 struct MessageService {
     
-    static let messagesCollection = Firestore.firestore().collection("messages")
+    static let messagesCollection = FirestoreConstants.MessagesCollection
     
     static func sendMessage(_ messageText: String, toUser user: User) {
         
